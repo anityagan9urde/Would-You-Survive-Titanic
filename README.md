@@ -1,5 +1,7 @@
+
 # Would-You-Survive-Titanic-
 Linear Regression model to see if you had been in the Titanic would you had survived.
+![Annotation 2021-05-24 175631](https://user-images.githubusercontent.com/68852047/119347676-7aca9300-bcb9-11eb-957b-b622481212eb.png)
 Running the project
 
     Open CMD. Ensure that you are in the project home directory. Create the machine learning model by running below command -
