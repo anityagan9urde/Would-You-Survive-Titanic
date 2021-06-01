@@ -21,17 +21,17 @@ def predict():
     else:
         print('GET received')
         d = request.args.to_dict()
-
+#d is a dictionary to store the input values
     if regressor:
-        whole_table = pd.DataFrame([d])
-        object_table = whole_table[whole_table.columns.drop('Age')]
-        ohe = pd.get_dummies(object_table)
-        query = whole_table[whole_table.columns.drop('Sex', 'Embarked')].append(ohe).fillna(0)
-        query = query.reindex(columns=model_columns, fill_value=0)
-        prediction = regressor.predict(query)
+        whole_table = pd.DataFrame([d])#converting d into a dataframe
+        object_table = whole_table[whole_table.columns.drop('Age')]#separating numerical values
+        ohe = pd.get_dummies(object_table)#one hot encoding for 'object' datatype
+        query = whole_table[whole_table.columns.drop('Sex', 'Embarked')].append(ohe).fillna(0)#rejoining the dataframe
+        query = query.reindex(columns=model_columns, fill_value=0)#reindexing of columns
+        prediction = regressor.predict(query)#.predict() for our input data
         if prediction[0]>prediction[1]:
             output = 'would have died.'
-        elif prediction[0]<prediction[1]:
+        elif prediction[0]<=prediction[1]:
             output = 'would have survived.'
 
         return render_template('index.html', prediction_text='You {}'.format(output))
