@@ -15,11 +15,11 @@ for col, col_type in df_.dtypes.iteritems():
 
 df_ohe = pd.get_dummies(df_, columns=categoricals, dummy_na=True)
 
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
 dependent_variable = 'Survived'
 X = df_ohe[df_ohe.columns.difference([dependent_variable])]
 y = df_ohe[dependent_variable]
-regressor = LinearRegression()
+regressor = LogisticRegression()
 regressor.fit(X, y)
 
 # Saving model to disk
