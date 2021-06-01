@@ -4,16 +4,16 @@ import pandas as pd
 url = 'https://s3.amazonaws.com/assets.datacamp.com/course/Kaggle/train.csv'
 df = pd.read_csv(url)
 include = ['Age', 'Sex', 'Embarked', 'Survived']
-df_ = df[include]
+df = df[include]
 
 categoricals = []
-for col, col_type in df_.dtypes.iteritems():
+for col, col_type in df.dtypes.iteritems():
     if col_type == 'O':
         categoricals.append(col)
     else:
-        df_[col].fillna(0, inplace=True)
+        df[col].fillna(0, inplace=True)
 
-df_ohe = pd.get_dummies(df_, columns=categoricals, dummy_na=True)
+df_ohe = pd.get_dummies(df, columns=categoricals, dummy_na=True)
 
 from sklearn.linear_model import LogisticRegression
 dependent_variable = 'Survived'
