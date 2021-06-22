@@ -1,8 +1,4 @@
-Django          2.1.2
-django-heroku   0.3.1
-gunicorn        19.9.0
-pip             10.0.1
-psycopg2        2.7.5
-pytz            2018.5
-setuptools      39.0.1
-whitenoise      4.1
+Flask==1.1.2
+Flask_RESTful==0.3.8
+gunicorn==19.9.0
+
