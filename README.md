@@ -1,6 +1,6 @@
 
 # Would-You-Survive-Titanic-
-https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy/would-you-survive-the-titanic-)
 
 Logistic Regression model to see if you had been on the Titanic would you had survived.
 
