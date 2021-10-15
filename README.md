@@ -1,6 +1,6 @@
 
 # **Would You Survive Titanic Disaster --version 1.0**
-## - *Run it directly by clicking here: [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://would-you-survive-the-titanic.herokuapp.com/)
+## - *Run it directly by clicking here:* [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://would-you-survive-the-titanic.herokuapp.com/)
 
 Logistic Regression model to see if you had been on the Titanic would you had survived provided you age, sex and embarkment info.
 
