@@ -6,6 +6,7 @@ import json
 
 app = Flask(__name__)
 regressor = joblib.load('model.pkl')
+model_columns = joblib.load("model_columns.pkl")
 
 @app.route('/')
 def home():
