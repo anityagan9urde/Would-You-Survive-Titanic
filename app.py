@@ -34,7 +34,7 @@ def predict():
         elif prediction[0]<=prediction[1]:
             output = 'would have survived.'
 
-        return render_template('index.html', prediction_text='You {}'.format(output))
+        return render_template('predict.html', prediction_text='You {}'.format(output))
 
 
     else:
