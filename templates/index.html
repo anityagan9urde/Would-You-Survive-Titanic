@@ -13,6 +13,10 @@
         <div class="login">
             <h1>Had you been on Titanic, would you have survived?</h1>
             <form action="{{ url_for('predict')}}"method="post">
+                    <hr style="color: #808080;">
+                    <marquee><h1>{{ prediction_text }}</h1></marquee>
+                    <marquee><div class="tenor-gif-embed" data-postid="17900990" data-share-method="host" data-aspect-ratio="1" data-width="250px"><a href="https://tenor.com/view/negros-ataud-ataud-meme-negros-dance-coffin-squad-gif-17900990">Dance meme</a>from <a href="https://tenor.com/search/negros+ataud-stickers">Dance meme</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script></marquee>
+                    <hr style="color: #808080;">
                 <input type="text" name="Age" placeholder="Type your current age here" required="required" maxlength="2" />
                 <br>
                 <br>
@@ -21,21 +25,18 @@
                 <label for="female">Female</label>
                 <br>
                 <br>
-                <label for="Embarked">Choose your Embarkment:</label>
+                <label for="Embarked">Choose your Embarkment location:</label>
                   <select name="Embarked">
                     <optgroup>
-                      <option value="C">C</option>
-                      <option value="S">S</option>
-                      <option value="Q">Q</option>
+                      <option value="C">Cherbourg</option>
+                      <option value="S">Southampton</option>
+                      <option value="Q">Queenstown</option>
                     </optgroup>
                   </select>
                 <br>
                 <br>
                 <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
             </form>
-            <br>
-            <br>
-             <h2>{{ prediction_text }}<h2>
         </div>
     </body>
 </html>
