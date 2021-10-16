@@ -13,19 +13,29 @@
         <div class="login">
             <h1>Had you been on Titanic, would you have survived?</h1>
             <form action="{{ url_for('predict')}}"method="post">
-                    <hr style="color: #808080;">
-                    <marquee><h1>{{ prediction_text }}</h1></marquee>
-                    <marquee><div class="tenor-gif-embed" data-postid="17900990" data-share-method="host" data-aspect-ratio="1" data-width="250px"><a href="https://tenor.com/view/negros-ataud-ataud-meme-negros-dance-coffin-squad-gif-17900990">Dance meme</a>from <a href="https://tenor.com/search/negros+ataud-stickers">Dance meme</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script></marquee>
-                    <hr style="color: #808080;">
+                <hr style="color: #808080;">
+                    <h1>{{ prediction_text }}</h1>
+                <hr style="color: #808080;">
+                <br>
+                <div>
+                <label for="Age">Your Age:</label>
                 <input type="text" name="Age" placeholder="Type your current age here" required="required" maxlength="2" />
+                </div>
                 <br>
                 <br>
-                <input type="radio" name="Sex" value="male"><label for="male">Male</label>
+                <div>
+                <label for="Sex">Your Sex:</label>
+                <div>
+                <input type="radio" name="Sex" value="male">
+                <label for="male">Male</label></div>
+                <div>
                 <input type="radio" name="Sex" value="female">
-                <label for="female">Female</label>
+                <label for="female">Female</label></div>
+                </div>
                 <br>
                 <br>
-                <label for="Embarked">Choose your Embarkment location:</label>
+                <div>
+                <label for="Embarked">Choose your Embarkment point:</label>
                   <select name="Embarked">
                     <optgroup>
                       <option value="C">Cherbourg</option>
@@ -33,6 +43,7 @@
                       <option value="Q">Queenstown</option>
                     </optgroup>
                   </select>
+                </div>
                 <br>
                 <br>
                 <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
